@@ -53,7 +53,15 @@ export default {
     },
     //this method allows the already registred user to log in the system.
     async login(){
-       
+      try { 
+        const { user, session, error } = await supabase.auth.signIn({ 
+          email: this.email, 
+          password: this.passwd, 
+        }); 
+        if (error) throw error; 
+        document.getElementById('status').innerHTML='You are now logged !' 
+      } catch (error) { 
+        alert(error.error_description || error.message);
     }
   }  
 }
