@@ -29,7 +29,7 @@ import { SupabaseAuthClient } from '@supabase/supabase-js/dist/module/lib/Supaba
 
 <script>
 
-const SUPABASE_URL = 'YOUR_SUPABASE_URL'
+const SUPABASE_URL = 'https://phtbhjenvsjjzrsdmpfz.supabase.co'
 const SUPABASE_KEY = 'YOUR_ANON_KEY'
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY)
 
