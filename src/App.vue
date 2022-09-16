@@ -30,7 +30,7 @@ import { SupabaseAuthClient } from '@supabase/supabase-js/dist/module/lib/Supaba
 <script>
 
 const SUPABASE_URL = 'https://phtbhjenvsjjzrsdmpfz.supabase.co'
-const SUPABASE_KEY = 'YOUR_ANON_KEY'
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBodGJoamVudnNqanpyc2RtcGZ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjMzMzc2MjYsImV4cCI6MTk3ODkxMzYyNn0.n_GQka_i9sXNyVOopzZYRbVIZoHXpLxufZLrnfjEbTg'
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY)
 
 
