@@ -51,7 +51,7 @@ export default {
         alert(error.error_description || error.message); 
       }  
     },
-    },
+    
     //this method allows the already registred user to log in the system.
     async login(){
       try { 
@@ -67,7 +67,7 @@ export default {
     
   }, 
   
-  // 
+  
     async reset(){
       try { 
         const { data, error } = await supabase.auth.api.resetPasswordForEmail(this.email) 
@@ -78,6 +78,19 @@ export default {
     }
     
   }, 
+  mounted(){
+    supabase.auth.onAuthStateChange(async (event, session) => {
+      if (event == 'PASSWORD_RECOVERY'){
+        const newPassword = prompt('What would you like your new password to be ?')
+        const {data, error} = await supabase.auth.update ({
+          password: newPassword,
+        })
+        if (data) alert('Password updated successfully !')
+        if (error) alert ('There was an error updating your password.')
+      }
+    })
+  }
+}
 }
 </script>
 
